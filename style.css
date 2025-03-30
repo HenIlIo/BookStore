@@ -70,7 +70,118 @@ nav a:hover{
 .search button:hover{
     background-color: #0056b3;
 }
+
+
 body{
     margin-top: 0;
     font-family: sans-serif;
+}
+.new-arrivals {
+    padding: 40px 30px;
+    /* background-color: #f0f0f0; */ /* Необязательно: легкий фон для секции */
+}
+
+.new-arrivals h2 { 
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #333;
+}
+
+.new-arrivals-slider {
+  width: 100%;
+  padding-top: 50px;    /* Отступ сверху для эффекта Coverflow */
+  padding-bottom: 50px; /* Отступ снизу для эффекта Coverflow */
+}
+
+/* Отдельный слайд */
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px; /* Ширина одного слайда (карточки) - подберите значение */
+  height: 450px; /* Высота одного слайда (карточки) - подберите значение */
+  /* Убираем стандартные стили flex, если они мешают */
+   display: block; /* Важно для Coverflow, чтобы карточка занимала всё пространство */
+   text-align: left; /* Сбрасываем центрирование текста Swiper по умолчанию */
+   background: none; /* Убираем фон по умолчанию, если он был */
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Масштабирует изображение, чтобы оно покрывало слайд */
+  border-radius: 8px; /* Скругление для изображения */
+}
+
+/* Стили для карточки внутри слайда */
+.book-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 8px; /* Скругление для карточки */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Легкая тень */
+}
+
+/* Контейнер с информацией о книге */
+.book-card .book-info {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7); /* Фон чуть темнее для лучшей читаемости */
+    color: white;
+    padding: 15px; /* Увеличим отступы */
+    border-radius: 5px;
+    margin: 0;
+    max-width: 80%; /* Ограничим ширину, чтобы текст не прилипал к краям */
+    box-sizing: border-box; /* Учитываем padding в ширине */
+    z-index: 2; /* Чтобы текст был поверх тени от coverflow */
+}
+.book-card .book-info h3,
+.book-card .book-info p,
+.book-card .book-info a {
+     margin: 0 0 8px 0; /* Отступы между текстовыми элементами */
+     color: white;
+     display: block;
+     line-height: 1.3; /* Межстрочный интервал */
+}
+.book-card .book-info h3 {
+    font-size: 18px; /* Размер заголовка */
+}
+.book-card .book-info p {
+    font-size: 14px; /* Размер обычного текста */
+}
+.book-card .book-info a {
+    font-weight: bold;
+    text-decoration: none; /* Убираем подчеркивание */
+    background-color: #007bff; /* Цвет кнопки "Подробнее" */
+    padding: 5px 10px;
+    border-radius: 4px;
+    display: inline-block; /* Делаем блочно-строчным */
+    margin-top: 5px;
+    transition: background-color 0.3s ease;
+}
+.book-card .book-info a:hover {
+    background-color: #0056b3;
+}
+ .book-card .book-info a:last-child {
+      margin-bottom: 0;
+ }
+
+/* Позиционирование текста */
+.book-card.text-pos-tl .book-info { top: 15px; left: 15px; }
+.book-card.text-pos-tr .book-info { top: 15px; right: 15px; text-align: right; }
+.book-card.text-pos-br .book-info { bottom: 15px; right: 15px; text-align: right; }
+.book-card.text-pos-bl .book-info { bottom: 15px; left: 15px; }
+
+/* Стили для элементов навигации Swiper (стрелки, пагинация) */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #007bff; /* Цвет стрелок */
+    /* Можно добавить фон, если стрелки плохо видно */
+    /* background-color: rgba(255, 255, 255, 0.7); */
+    /* padding: 10px; */
+    /* border-radius: 50%; */
+}
+.swiper-pagination-bullet-active {
+    background-color: #007bff; /* Цвет активной точки пагинации */
 }

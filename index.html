@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Магазин книг</title>
     <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 <body>
     
@@ -27,24 +29,97 @@
     </header>
 
     <main>
-        <section class="banner">
-            <img src="banner.jpg" alt="Баннер Магазин Книг"> 
-           <h1>Лучшие книги для вас</h1>
-           <p>Широкий выбор книг на любой вкус</p>
-           <a href="catalog.html" class="button">Перейти в каталог</a>
-       </section>
 
-       <section class="new-arrivals">
-           <h2>Горячие новинки</h2>
-           <div class="book-grid">
-                <! -- Здесь будут карточки книг-новинок --> 
-           </div>
-       </section>
+        <section class="new-arrivals">
+
+            <h2>Горячие новинки</h2>
+            <div class="swiper new-arrivals-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="book-card text-pos-tl"> 
+                            <img src="Image/book1.jpg" alt="Обложка книги 1">
+                            <div class="book-info">
+                               <h3>Название 1</h3> <p class="author">Автор 1</p> <p class="price">Цена 1</p> <a href="#">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="book-card text-pos-tr"> 
+                           <img src="Image/book2.jpg" alt="Обложка книги 2">
+                           <div class="book-info">
+                               <h3>Название 2</h3> <p class="author">Автор 2</p> <p class="price">Цена 2</p> <a href="#">Подробнее</a>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                       <div class="book-card text-pos-br"> 
+                           <img src="Image/book3.jpg" alt="Обложка книги 3">
+                            <div class="book-info">
+                               <h3>Название 3</h3> <p class="author">Автор 3</p> <p class="price">Цена 3</p> <a href="#">Подробнее</a>
+                            </div>
+                       </div>
+                    </div>
+                    <div class="swiper-slide">
+                       <div class="book-card text-pos-bl"> 
+                           <img src="Image/book4.jpg" alt="Обложка книги 4">
+                            <div class="book-info">
+                               <h3>Название 4</h3> <p class="author">Автор 4</p> <p class="price">Цена 4</p> <a href="#">Подробнее</a>
+                           </div>
+                       </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="book-card text-pos-tl"> 
+                            <img src="Image/book5.jpg" alt="Обложка книги 5">
+                            <div class="book-info">
+                               <h3>Название 5</h3> <p class="author">Автор 5</p> <p class="price">Цена 5</p> <a href="#">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="swiper-slide">
+                        <div class="book-card text-pos-tr"> 
+                           <img src="Image/book6.jpg" alt="Обложка книги 6">
+                           <div class="book-info">
+                               <h3>Название 6</h3> <p class="author">Автор 6</p> <p class="price">Цена 6</p> <a href="#">Подробнее</a>
+                           </div>
+                        </div>
+                    </div>
+                     <div class="swiper-slide">
+                       <div class="book-card text-pos-br"> 
+                           <img src="Image/book7.jpg" alt="Обложка книги 7">
+                            <div class="book-info">
+                               <h3>Название 7</h3> <p class="author">Автор 7</p> <p class="price">Цена 7</p> <a href="#">Подробнее</a>
+                            </div>
+                       </div>
+                    </div>
+                     <div class="swiper-slide">
+                       <div class="book-card text-pos-bl"> 
+                           <img src="Image/book8.jpg" alt="Обложка книги 8">
+                            <div class="book-info">
+                               <h3>Название 8</h3> <p class="author">Автор 8</p> <p class="price">Цена 8</p> <a href="#">Подробнее</a>
+                           </div>
+                       </div>
+                    </div>
+                     <div class="swiper-slide">
+                        <div class="book-card text-pos-tl"> 
+                            <img src="Image/book9.jpg" alt="Обложка книги 9">
+                            <div class="book-info">
+                               <h3>Название 9</h3> <p class="author">Автор 9</p> <p class="price">Цена 9</p> <a href="#">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div class="swiper-pagination"></div> <!-- Точки -->
+                <div class="swiper-button-prev"></div> <!-- Стрелка "назад" -->
+                <div class="swiper-button-next"></div> <!-- Стрелка "вперед" -->
+            </div>
+        </section>
 
        <section class="recommended">
            <h2>Рекомендуем</h2>
            <div class="book-grid">
-               <! -- Здесь будут карточки рекомендованных книг --> 
+               <!-- Здесь будут карточки рекомендованных книг --> 
            </div>
        </section>
    </main>
@@ -61,6 +136,7 @@
        </div>
        <p class="copyright">© 2023 Магазин Книг</p>
    </footer>
+   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
    <script src="script.js"></script>
 </body>
 </html>
