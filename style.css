@@ -85,24 +85,26 @@ body{
     color: #333;
 }
 .new-arrivals-slider {
-  width: 100%;
-  padding-top: 50px;    
-  padding-bottom: 50px; 
-}
+    width: 100%;
+    padding-top: 50px;    
+    padding-bottom: 50px; 
+    }
 .swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 300px; 
-  height: 450px;
-   text-align: left; 
-   background: none; 
+    background-position: center;
+    background-size: cover;
+    width: 300px; 
+    height: 450px;
+    display: block;
+    overflow: hidden;
+    text-align: left; 
+    background: none; 
 }
 .swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; 
-  border-radius: 8px; 
+    display: block;
+    width: 300px; 
+    height: 450px;
+    object-fit: cover; 
+    border-radius: 8px; 
 }
 .book-card {
     position: relative;
@@ -153,10 +155,8 @@ body{
  .book-card .book-info a:last-child {
       margin-bottom: 0;
  }
-.book-card.text-pos-tl .book-info { top: 15px; left: 15px; }
+ 
 .book-card.text-pos-tr .book-info { top: 15px; right: 15px; text-align: right; }
-.book-card.text-pos-br .book-info { bottom: 15px; right: 15px; text-align: right; }
-.book-card.text-pos-bl .book-info { bottom: 15px; left: 15px; }
 .swiper-button-next,
 .swiper-button-prev {
     color: #007bff;
@@ -164,3 +164,4 @@ body{
 .swiper-pagination-bullet-active {
     background-color: #007bff; 
 }
+
